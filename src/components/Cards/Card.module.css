@@ -1,0 +1,39 @@
+.cardMain {
+    display: flex;
+    width: 800px;
+    margin: 10px auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    -webkit-box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.205);
+    -moz-box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.205);
+    box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.205);
+}
+
+.cardCol1 {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.cardCol2 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.tags {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.userInfo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cardDescription {
+    display: block;
+}
