@@ -5,22 +5,25 @@ const Card = () => {
     return (
         <div className={styles.cardMain}>
             <div className={styles.cardCol1}>
-                <h2 className={styles.cardh3}>Dashboard for an IOT Application</h2>
+                <div className={styles.cardTitle}>
+                    Dashboard for an IOT Application
+                </div>
                 <div className={styles.cardDescription}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Minus ipsam, totam voluptatum, vel nam a beatae excepturi
-                    minima...
+                    A customizable dashboard for an IOT application, which
+                    allows users to manage...
                 </div>
             </div>
             <div className={styles.cardCol2}>
                 <div className={styles.userInfo}>
-                    <span>Icon</span>
-                    <span>John Doe</span>
+                    <img src="/assets/userPlaceholder.svg" alt="" />
+                    <span className={styles.userName}>John Doe</span>
                 </div>
                 <Tags />
             </div>
-            <div>
-                <h3>Upvote</h3>
+            <div className={styles.rating}>
+                <span className={styles.ratingButton}>&#x25B2;</span>
+                <span>15</span>
+                <span className={styles.ratingButton}>&#x25BC;</span>
             </div>
         </div>
     );
