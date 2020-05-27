@@ -1,12 +1,11 @@
 .cardMain {
     display: flex;
-    width: 800px;
-    margin: 10px auto;
-    justify-content: space-between;
+    width: 850px;
+    margin: 20px 250px; 
     align-items: center;
     background-color: #fff;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding:0px 20px 30px 30px;
     -webkit-box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.205);
     -moz-box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.205);
     box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.205);
@@ -16,7 +15,6 @@
     display: flex;
     flex: 3;
     flex-direction: column;
-    justify-content: space-evenly;
 }
 .cardCol2 {
     display: flex;
@@ -25,15 +23,40 @@
 }
 
 .tags {
+    margin-top: 5px;
     display: flex;
     justify-content: space-evenly;
 }
 
 .userInfo {
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
 }
 
 .cardDescription {
     display: block;
+    font-family: 'Josefin Sans';
+    font-weight:100;
+}
+
+
+.cardh3{
+    
+    margin-top: 15px;
+}
+
+
+.tag1{
+    background-color: #D5ECF7;
+    border-radius: 60px;
+    width: 80px;
+    text-align: center;
+    color: rgb(6, 133, 196);
+}
+.tag2{
+    background-color:#FCDBE3;
+    border-radius: 60px;
+    width: 80px;
+    text-align: center;
+    color:#F23F6A;
 }

@@ -1,0 +1,24 @@
+
+.navElements{
+    list-style: none;
+    display:inline;
+    font-size: large;
+    font-weight: 600;
+}
+
+.navContainer{
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 1px 1px 16px 0px rgba(50, 50, 50, 0.205);    
+}
+
+.navFloat{
+    list-style: none;
+    float:right;
+    font-size: large;
+    font-weight: 600;
+}
+
+.navli{
+    margin-left: 40px;
+}
