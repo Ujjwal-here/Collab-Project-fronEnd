@@ -15,7 +15,6 @@ const Card = () => {
             </div>
             <div className={styles.cardCol2}>
                 <div className={styles.userInfo}>
-                    <img src="/assets/userPlaceholder.svg" alt="" />
                     <span className={styles.userName}>John Doe</span>
                 </div>
                 <Tags />

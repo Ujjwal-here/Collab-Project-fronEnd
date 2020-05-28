@@ -1,0 +1,41 @@
+.supMain{
+    margin-top:90px;
+    margin-right:20px ;
+    display: flex;
+    flex:1;
+    justify-content: space-around;
+}
+.supForm{
+    border-radius: 99px;
+    border: 2px solid cyan;
+    padding: 50px 120px;
+    
+}
+.supElements{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+}
+.supInput{
+    margin-top: 10px;
+    padding: 14px 1px;
+}
+
+.supBtn{
+    margin: 20px auto;
+    border-radius: 999px;
+    border: 2px solid darkcyan;
+    background: transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 1.5s ease;
+    color:teal;
+    font-weight: bolder;
+}
+
+.supBtn:hover{
+  background-color:dodgerblue;
+  color:cornsilk;
+  
+}
