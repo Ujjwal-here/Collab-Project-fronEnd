@@ -19,9 +19,12 @@ const LoginPage = () => {
                         <div className={styles.supElements}>
                             <TextField label="Password" variant="outlined" fullWidth />
                         </div>
-                        <div>
+                        <div className={styles.buttonContainer}>
                             <button className={styles.supBtn} type="submit">
                                 Login <BsArrowRight />
+                            </button>
+                            <button className={styles.signUpButton} type="submit">
+                                Sign up <BsArrowRight />
                             </button>
                         </div>
                     </form>

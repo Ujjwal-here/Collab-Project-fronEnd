@@ -1,7 +1,6 @@
 .supMain {
     display: flex;
-    flex: 1;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     height: 100vh;
     align-items: center;
 }
@@ -23,21 +22,39 @@
     margin-bottom: 50px;
 }
 
+.buttonContainer {
+    display: flex;
+}
+
 .supBtn {
     margin: 30px 0;
     border-radius: 4px;
     display: flex;
     
     border: none;
-    /* background: transparent; */
+    background: rgba(25, 77, 250, 0.856);
     padding: 14px 40px;
     cursor: pointer;
-    transition: 0.5s ease;
-    color: teal;
+    transition: 0.2s ease;
+    color: #fff;
     font-weight: bolder;
+    cursor: pointer;
 }
 
-.supBtn:hover {
+.signUpButton {
+    margin: 30px 10px;
+    border-radius: 4px;
+    display: flex;
+    border: none;
+    background: #d3d3d369;
+    padding: 14px 40px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-weight: bolder;
+
+}
+
+.supBtn:hover, .signUpButton:hover {
     background-color: dodgerblue;
     color: cornsilk;
 }
@@ -49,8 +66,23 @@
 
 .col2 {
     display: flex;
+    margin: 0 auto;
     align-items: center;
     background-color: #fff;
     height: 100%;
     flex: 1;
+}
+
+
+@media screen and (max-width: 900px) {
+    .col1 {
+        display: none;
+    }
+
+    .col2 {
+        justify-content: center;
+    }
+    .supForm {
+        padding: 10px 40px;
+    }
 }
