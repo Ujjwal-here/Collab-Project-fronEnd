@@ -1,7 +1,7 @@
-import styles from "./LoginPage.module.css";
+import Link from "next/link";
 import TextField from "@material-ui/core/TextField";
-import Button from '@material-ui/core/Button';
-import {BsArrowRight} from 'react-icons/bs'
+import { BsArrowRight } from "react-icons/bs";
+import styles from "./LoginPage.module.css";
 
 const LoginPage = () => {
     return (
@@ -14,18 +14,31 @@ const LoginPage = () => {
                     <div className={styles.title}>Login</div>
                     <form action="">
                         <div className={styles.supElements}>
-                            <TextField label="Email" variant="outlined" fullWidth />
+                            <TextField
+                                label="Email"
+                                variant="outlined"
+                                fullWidth
+                            />
                         </div>
                         <div className={styles.supElements}>
-                            <TextField label="Password" variant="outlined" fullWidth />
+                            <TextField
+                                label="Password"
+                                variant="outlined"
+                                fullWidth
+                            />
                         </div>
                         <div className={styles.buttonContainer}>
                             <button className={styles.supBtn} type="submit">
                                 Login <BsArrowRight />
                             </button>
-                            <button className={styles.signUpButton} type="submit">
-                                Sign up <BsArrowRight />
-                            </button>
+                            <Link href="/signup">
+                                <button
+                                    className={styles.signUpButton}
+                                    type="submit"
+                                >
+                                    Sign up <BsArrowRight />
+                                </button>
+                            </Link>
                         </div>
                     </form>
                 </div>

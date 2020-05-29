@@ -15,3 +15,12 @@ body {
 button::-moz-focus-inner {
     border: 0;
 }
+
+button:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: #2B44FF;
+}

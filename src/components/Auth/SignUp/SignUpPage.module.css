@@ -1,20 +1,20 @@
 .supMain{
-    margin-top:10px;
-    margin-right:20px ;
+    /* margin-top:10px; */
+    /* margin-right:20px ; */
     display: flex;
-    flex:1;
-    justify-content: space-around;
+    height: 100vh;
+    align-items: center;
+    /* flex:1; */
+    /* justify-content: space-around; */
 }
 .supForm{
-    border-radius: 99px;
-    border: 2px solid cyan;
     padding: 50px 120px;
-    
 }
 .supElements{
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    width: 400px;
 
 }
 .supInput{
@@ -24,14 +24,14 @@
 
 
 .supBtn{
-    margin: 20px auto;
-    border-radius: 999px;
-    border: 2px solid darkcyan;
-    background: transparent;
-    padding: 10px 20px;
+    margin: 30px auto;
+    border-radius: 4px;
+    border: none;
+    background: rgba(25, 77, 250, 0.856);;
+    padding: 14px 40px;
     cursor: pointer;
-    transition: 1.5s ease;
-    color:teal;
+    transition: 0.2s ease;
+    color:#fff;
     font-weight: bolder;
 }
 
@@ -39,4 +39,30 @@
   background-color:dodgerblue;
   color:cornsilk;
   
+}
+
+.col1 {
+    text-align: center;
+    flex: 1;
+}
+.col2 {
+    flex: 1;
+    margin: 0 auto;
+    align-items: center;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+}
+
+@media screen and (max-width: 900px) {
+    .col1 {
+        display: none;
+    }
+
+    .col2 {
+        justify-content: center;
+    }
+    .supForm {
+        padding: 10px 40px;
+    }
 }
