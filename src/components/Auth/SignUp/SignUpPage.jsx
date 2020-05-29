@@ -1,36 +1,100 @@
-import styles from './SignUpPage.module.css'
+import Link from "next/link";
+import { useState } from "react";
+import styles from "./SignUpPage.module.css";
+import { TextField, InputAdornment, IconButton } from "@material-ui/core";
+import { BsEyeSlashFill, BsEyeFill } from "react-icons/bs";
 
 const SignUpPage = () => {
+    const [showPassword, setShowPassword] = useState(false);
+    const handleShowPassword = () => {
+        setShowPassword(!showPassword);
+    };
     return (
         <div className={styles.supMain}>
-            <img src="/assets/Group4.svg" alt="img"></img>
-            <div className={styles.supForm}>
-                <h1>Sign Up</h1>
-                <form action="">
-                    <div className={styles.supElements}>
-                        <label htmlFor="name"><h3>Name:</h3></label>
-                        <input className={styles.supInput} className={styles.supInput} type="text" name="name" placeholder="Enter your name" />
-                    </div>
-                    <div className={styles.supElements}>
-                        <label htmlFor="email"><h3>Email:</h3></label>
-                        <input className={styles.supInput}  type="email" name="email" placeholder="Enter your email address" />
-                    </div>
-                    <div className={styles.supElements}>
-                        <label htmlFor="password"><h3>Password:</h3></label>
-                        <input className={styles.supInput}  type="password" placeholder="Enter password" />
-                    </div>
-                    <div className={styles.supElements}>
-                        <label htmlFor="password"> <h3>Confirm Password:</h3></label>
-                        <input className={styles.supInput} type="password" placeholder="Confirm Password" />
-                    </div>
-                    <div>
-                        <button className={styles.supBtn} type="submit">Submit</button>
-                    </div>
-                </form>
+            <div className={styles.col1}>
+                <img src="/assets/Group4.svg" alt="img"></img>
+            </div>
+            <div className={styles.col2}>
+                <div className={styles.supForm}>
+                    <h1>Sign Up</h1>
+                    <form action="">
+                        <div className={styles.supElements}>
+                            <TextField
+                                label="Name"
+                                variant="outlined"
+                                fullWidth
+                            />
+                        </div>
+                        <div className={styles.supElements}>
+                            <TextField
+                                label="Email"
+                                type="email"
+                                variant="outlined"
+                                fullWidth
+                            />
+                        </div>
+                        <div className={styles.supElements}>
+                            <TextField
+                                label="Password"
+                                variant="outlined"
+                                type={showPassword ? "text" : "password"}
+                                InputProps={{
+                                    endAdornment: (
+                                        <InputAdornment position="end">
+                                            <IconButton
+                                                onClick={handleShowPassword}
+                                            >
+                                                {showPassword ? (
+                                                    <BsEyeFill />
+                                                ) : (
+                                                    <BsEyeSlashFill />
+                                                )}
+                                            </IconButton>
+                                        </InputAdornment>
+                                    ),
+                                }}
+                                fullWidth
+                            />
+                        </div>
+                        <div className={styles.supElements}>
+                            <TextField
+                                label="Confirm password"
+                                variant="outlined"
+                                type={showPassword ? "text" : "password"}
+                                InputProps={{
+                                    endAdornment: (
+                                        <InputAdornment position="end">
+                                            <IconButton
+                                                onClick={handleShowPassword}
+                                            >
+                                                {showPassword ? (
+                                                    <BsEyeFill />
+                                                ) : (
+                                                    <BsEyeSlashFill />
+                                                )}
+                                            </IconButton>
+                                        </InputAdornment>
+                                    ),
+                                }}
+                                fullWidth
+                            />
+                        </div>
+                        <div>
+                            <button className={styles.supBtn} type="submit">
+                                Submit
+                            </button>
+                        </div>
+                        <div className={styles.loginMessage}>
+                            Already a User?{" "}
+                            <Link href="/login">
+                                <a>Login here</a>
+                            </Link>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
+    );
+};
 
-    )
-}
-
-export default SignUpPage
+export default SignUpPage;
