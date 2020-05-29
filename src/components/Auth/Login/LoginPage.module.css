@@ -30,7 +30,7 @@
     margin: 30px 0;
     border-radius: 4px;
     display: flex;
-    
+
     border: none;
     background: rgba(25, 77, 250, 0.856);
     padding: 14px 40px;
@@ -51,10 +51,10 @@
     cursor: pointer;
     transition: 0.2s ease;
     font-weight: bolder;
-
 }
 
-.supBtn:hover, .signUpButton:hover {
+.supBtn:hover,
+.signUpButton:hover {
     background-color: dodgerblue;
     color: cornsilk;
 }
@@ -72,7 +72,6 @@
     height: 100%;
     flex: 1;
 }
-
 
 @media screen and (max-width: 900px) {
     .col1 {

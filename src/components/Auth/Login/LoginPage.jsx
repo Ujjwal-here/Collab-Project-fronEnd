@@ -1,9 +1,14 @@
 import Link from "next/link";
-import TextField from "@material-ui/core/TextField";
-import { BsArrowRight } from "react-icons/bs";
+import { useState } from "react";
+import { TextField, InputAdornment, IconButton } from "@material-ui/core";
+import { BsArrowRight, BsEyeSlashFill, BsEyeFill } from "react-icons/bs";
 import styles from "./LoginPage.module.css";
 
 const LoginPage = () => {
+    const [showPassword, setShowPassword] = useState(false);
+    const handleShowPassword = () => {
+        setShowPassword(!showPassword);
+    };
     return (
         <div className={styles.supMain}>
             <div className={styles.col1}>
@@ -24,6 +29,22 @@ const LoginPage = () => {
                             <TextField
                                 label="Password"
                                 variant="outlined"
+                                type={showPassword ? "text" : "password"}
+                                InputProps={{
+                                    endAdornment: (
+                                        <InputAdornment position="end">
+                                            <IconButton
+                                                onClick={handleShowPassword}
+                                            >
+                                                {showPassword ? (
+                                                    <BsEyeFill />
+                                                ) : (
+                                                    <BsEyeSlashFill />
+                                                )}
+                                            </IconButton>
+                                        </InputAdornment>
+                                    ),
+                                }}
                                 fullWidth
                             />
                         </div>

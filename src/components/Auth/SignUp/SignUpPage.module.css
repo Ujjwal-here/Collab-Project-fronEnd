@@ -1,4 +1,4 @@
-.supMain{
+.supMain {
     /* margin-top:10px; */
     /* margin-right:20px ; */
     display: flex;
@@ -7,38 +7,35 @@
     /* flex:1; */
     /* justify-content: space-around; */
 }
-.supForm{
+.supForm {
     padding: 50px 120px;
 }
-.supElements{
+.supElements {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     width: 400px;
-
 }
-.supInput{
+.supInput {
     margin-top: 10px;
     padding: 14px 1px;
 }
 
-
-.supBtn{
+.supBtn {
     margin: 30px auto;
     border-radius: 4px;
     border: none;
-    background: rgba(25, 77, 250, 0.856);;
+    background: rgba(25, 77, 250, 0.856);
     padding: 14px 40px;
     cursor: pointer;
     transition: 0.2s ease;
-    color:#fff;
+    color: #fff;
     font-weight: bolder;
 }
 
-.supBtn:hover{
-  background-color:dodgerblue;
-  color:cornsilk;
-  
+.supBtn:hover {
+    background-color: dodgerblue;
+    color: cornsilk;
 }
 
 .col1 {

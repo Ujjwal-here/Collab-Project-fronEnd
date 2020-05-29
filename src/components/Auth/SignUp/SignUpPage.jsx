@@ -1,8 +1,14 @@
 import Link from "next/link";
-import TextField from "@material-ui/core/TextField";
+import { useState } from "react";
 import styles from "./SignUpPage.module.css";
+import { TextField, InputAdornment, IconButton } from "@material-ui/core";
+import { BsEyeSlashFill, BsEyeFill } from "react-icons/bs";
 
 const SignUpPage = () => {
+    const [showPassword, setShowPassword] = useState(false);
+    const handleShowPassword = () => {
+        setShowPassword(!showPassword);
+    };
     return (
         <div className={styles.supMain}>
             <div className={styles.col1}>
@@ -22,6 +28,7 @@ const SignUpPage = () => {
                         <div className={styles.supElements}>
                             <TextField
                                 label="Email"
+                                type="email"
                                 variant="outlined"
                                 fullWidth
                             />
@@ -30,6 +37,22 @@ const SignUpPage = () => {
                             <TextField
                                 label="Password"
                                 variant="outlined"
+                                type={showPassword ? "text" : "password"}
+                                InputProps={{
+                                    endAdornment: (
+                                        <InputAdornment position="end">
+                                            <IconButton
+                                                onClick={handleShowPassword}
+                                            >
+                                                {showPassword ? (
+                                                    <BsEyeFill />
+                                                ) : (
+                                                    <BsEyeSlashFill />
+                                                )}
+                                            </IconButton>
+                                        </InputAdornment>
+                                    ),
+                                }}
                                 fullWidth
                             />
                         </div>
@@ -37,6 +60,22 @@ const SignUpPage = () => {
                             <TextField
                                 label="Confirm password"
                                 variant="outlined"
+                                type={showPassword ? "text" : "password"}
+                                InputProps={{
+                                    endAdornment: (
+                                        <InputAdornment position="end">
+                                            <IconButton
+                                                onClick={handleShowPassword}
+                                            >
+                                                {showPassword ? (
+                                                    <BsEyeFill />
+                                                ) : (
+                                                    <BsEyeSlashFill />
+                                                )}
+                                            </IconButton>
+                                        </InputAdornment>
+                                    ),
+                                }}
                                 fullWidth
                             />
                         </div>
