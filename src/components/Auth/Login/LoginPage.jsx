@@ -1,27 +1,33 @@
-import styles from './LoginPage.module.css'
+import styles from "./LoginPage.module.css";
+import TextField from "@material-ui/core/TextField";
+import Button from '@material-ui/core/Button';
+import {BsArrowRight} from 'react-icons/bs'
 
 const LoginPage = () => {
     return (
         <div className={styles.supMain}>
-            <img src="/assets/Group5.svg" alt="img"></img>
-            <div className={styles.supForm}>
-                <h1>Login</h1>
-                <form action="">
-                    <div className={styles.supElements}>
-                        <label htmlFor="email"><h3>Email:</h3></label>
-                        <input className={styles.supInput} type="email" name="email" placeholder="Enter your email address" />
-                    </div>
-                    <div className={styles.supElements}>
-                        <label htmlFor="password"><h3>Password:</h3></label>
-                        <input className={styles.supInput} type="password" placeholder="Enter password" />
-                    </div>
-                    <div>
-                        <button className={styles.supBtn} type="submit">Login</button>
-                    </div>
-                </form>
+            <div className={styles.col1}>
+                <img src="/assets/Group5.svg" alt="img"></img>
+            </div>
+            <div className={styles.col2}>
+                <div className={styles.supForm}>
+                    <div className={styles.title}>Login</div>
+                    <form action="">
+                        <div className={styles.supElements}>
+                            <TextField label="Email" variant="outlined" fullWidth />
+                        </div>
+                        <div className={styles.supElements}>
+                            <TextField label="Password" variant="outlined" fullWidth />
+                        </div>
+                        <div>
+                            <button className={styles.supBtn} type="submit">
+                                Login <BsArrowRight />
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-
-    )
-}
-export default LoginPage
+    );
+};
+export default LoginPage;

@@ -1,25 +1,32 @@
-
-import styles from './Sidebar.module.css';
-import { IoMdAddCircle } from 'react-icons/io';
-import { AiFillHome, AiFillSetting } from 'react-icons/ai'
-import { MdBook } from 'react-icons/md'
+import styles from "./Sidebar.module.css";
+import { IoMdAddCircle } from "react-icons/io";
+import { AiFillHome, AiFillSetting } from "react-icons/ai";
+import { MdBook } from "react-icons/md";
+import { useState } from "react";
 
 const Sidebar = () => {
+    const active = useState('home')
     return (
         <div className={styles.sbarMain}>
-            <h1 className={styles.sbarh1}>No Name</h1>
-            <div className={styles.sbarAddPost}>
-                <IoMdAddCircle />
-                New Post
-                </div>
-            <div className={styles.sbHome}><AiFillHome />Home</div>
-            <div className={styles.sbPost}><MdBook /> My Post</div>
+            <div className={styles.sbarh1}>NONAME</div>
+            <button className={styles.sbarAddPost}>
+                <IoMdAddCircle size="1.35em" />
+                <span className={styles.sbNewButLabel}>New Post</span>
+            </button>
+            <div className={styles.sbHome}>
+                <AiFillHome size="1.2em" />
+                <span className={styles.sbItemName}>Home</span>
+            </div>
+            <div className={styles.sbPost}>
+                <MdBook size="1.2em" />
+                <span className={styles.sbItemName}>My Post</span>
+            </div>
             <div className={styles.sbSettings}>
-                <AiFillSetting />
-                Settings
+                <AiFillSetting size="1.2em" />
+                <span className={styles.sbItemName}>Settings</span>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Sidebar
+export default Sidebar;
