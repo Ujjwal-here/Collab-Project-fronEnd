@@ -1,3 +1,4 @@
+import { FaUserCircle } from 'react-icons/fa'
 import styles from "./Card.module.css";
 import Tags from "./Tags";
 
@@ -15,6 +16,7 @@ const Card = () => {
             </div>
             <div className={styles.cardCol2}>
                 <div className={styles.userInfo}>
+                    <span><FaUserCircle size="20px" /></span>
                     <span className={styles.userName}>John Doe</span>
                 </div>
                 <Tags />
