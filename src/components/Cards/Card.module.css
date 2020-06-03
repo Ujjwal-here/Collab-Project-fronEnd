@@ -1,8 +1,9 @@
 .cardMain {
     display: flex;
     position: relative;
-    width: 850px;
-    margin: 20px auto;
+    max-width: 850px;
+    min-width: 500px;
+    margin: 20px calc(5vw + 10px) 20px calc(10vw + 250px);
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
